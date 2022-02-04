@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Diaporama de 3 images avec transition différentes">
+    <meta name="author" content="Alain BROYE">
+    <meta name="generator" content="Virtual Studio Code version 1.63">
+    <title>Diaporama · Bootstrap v5.1</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">    
+  </head>
+  <body>
+    
+  <header>
+    <h1>Diaporama de Trois images</h1>
+  </header>
+
+  <main>
+    <!-- Début du carousel -->
+    <!-- Style de défilement des diapositive slide -->
+    <div id="diaporama" class="carousel slide" data-bs-ride="carousel">
+      <!-- J'ajoute des indicateurs en bas du slide -->
+      <div class="carousel-indicators">
+        <!-- Je détermine qu'elle sera la première diapo en la passant active -->
+        <button type="button" data-bs-target="#diaporama" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapo 1"></button>
+        <button type="button" data-bs-target="#diaporama" data-bs-slide-to="1" aria-label="Diapo 2"></button>
+        <button type="button" data-bs-target="#diaporama" data-bs-slide-to="2" aria-label="Diapo 3"></button>
+      </div>
+      <!-- Je mets un ombrage et j'arrondi les coins du diaporama -->
+      <div class="shadow carousel-inner rounded-slide">
+        <!-- Temps de défilement des images data-bs-interval -->
+        <div class="carousel-item active" data-bs-interval="5000"><!-- Durée 5s -->
+          <!-- Je défini quelle image sera la première à 100% dans le diaporama avec la class overlay pour quelle soit toujours en dessous du texte -->
+          <img src="images/diapos/diapo-1.jpeg" class="d-block w-100 overlay-image" alt="Diapo-1">
+          <!-- Je créé le container qui contiendre le texte et le bouton -->
+          <div class="container">
+            <!-- Je défini le text au début du container vous pouvez utiliser start . rien . end cf.exemple ci-dessous -->
+            <div class="carousel-caption text-start">
+              <!-- Titre de la diapo. 1 -->
+              <h2>1<sup>ère</sup> image du diaporama</h2>
+              <!-- Texte de la diapo. 1-->
+              <p>Texte explicatif de l'image du diaporama position 1 des diapositives.</p>
+              <!-- Bouton de la diapo. 1 Couleur bleu primary . orange warning . vert success cf.exemples ci-dessous -->
+              <p><a class="btn btn-lg btn-primary" href="https://www.guides-montagne.org/" target="blank">En savoir plus</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000"><!-- Durée 5s -->
+          <img src="images/diapos/diapo-2.jpeg" class="d-block w-100 overlay-image" alt="diapo-2">
+          <div class="container">
+            <div class="carousel-caption text">
+              <h2>2<sup>ème</sup> image du diaporama.</h2>
+              <p>Texte explicatif de l'image du diaporama position 2 des diapositives.</p>
+              <p><a class="btn btn-lg btn-warning" href="http://enmontagne.eu/" target="blank">Lire la suite</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000"><!-- Durée 5s -->
+          <img src="images/diapos/diapo-3.jpeg" class="d-block w-100 overlay-image" alt="diapo-3">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h2>3<sup>ème</sup> image du diaporama.</h2>
+              <p>Texte explicatif de l'image du diaporama position 3 des diapositives.</p>
+              <p><a class="btn btn-lg btn-success" href="https://www.alpissime.com/blog/alpes-francaises-les-15-plus-beaux-sites-naturels-a-voir/" target="blank">Parcourir la galerie</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- J'ajoute la flèche gauche de défilement -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#diaporama" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <!-- J'ajoute la flèche droite de défilement -->
+      <button class="carousel-control-next" type="button" data-bs-target="#diaporama" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+  </main>
+
+    <script src="css/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+body {
+  min-height: 75rem;
+  height: 100vh;
+  text-align: center;
+  padding-top: 2rem;
+  margin-left: 3.75rem;
+  margin-right: 3.75rem;
+  }
+/* CSS diaporama */
+
+/* J'ajoute une marge en bas du diaporama de 64px */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+/* J'arrondi les coins du diaporama de 16px */
+.rounded-slide{
+  border-radius: 1rem;
+  }
+/* Je défini la hauteur du diaporama de 512px et je mets un fond noir pour donner du contrast aux images avec un texte blanc */
+.carousel-item {
+  height: 32rem;
+  background: #000000;
+  color: white;
+  position: relative;
+  }
+/* Je positionne les images au coin suppérieur gauche à 0px du bord gauche et du haut et je leur donne une position absolue et une largeur 100% et une hauteur de 512px */
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+/* Je fais en sorte que le texte passe au dessus des images avec une opacité de 0.5 sur le background noir afin de faire resortir le texte */
+.overlay-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  }    
+/* Enfin, je dis au contenu redactionnel ainsi qu'au bouton d'être positionnés à 50px du bas et à gauche */
+  .container-slide{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    }
+  
